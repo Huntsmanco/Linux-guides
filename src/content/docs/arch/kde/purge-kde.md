@@ -37,6 +37,7 @@ Remove the main KDE groups:
 
 ```bash
 sudo pacman -Rns plasma-meta kde-applications
+``` 
 
 ---
 
@@ -47,11 +48,13 @@ Search remaining packages:
 ```bash
 pacman -Qs plasma
 pacman -Qs kde
+``` 
 
 If anything is still installed, remove it manually:
 
 ```bash
 sudo pacman -Rns package-name
+``` 
 
 ---
 
@@ -61,17 +64,20 @@ Check status:
 
 ```bash
 systemctl status sddm
+``` 
 
 Stop and disable:
 
 ```bash
 sudo systemctl disable sddm
 sudo systemctl stop sddm
+``` 
 
 Remove it:
 
 ```bash
 sudo pacman -Rns sddm
+``` 
 
 ---
 
@@ -84,6 +90,7 @@ rm -rf ~/.config/plasma*
 rm -rf ~/.config/kde*
 rm -rf ~/.local/share/plasma*
 rm -rf ~/.cache/*
+``` 
 
 ---
 
@@ -91,6 +98,7 @@ rm -rf ~/.cache/*
 
 ```bash
 sudo pacman -Rns $(pacman -Qdtq)
+``` 
 
 ---
 
@@ -100,6 +108,7 @@ Check if Plasma still exists:
 
 ```bash
 ls /usr/share/xsessions | grep plasma
+``` 
 
 If nothing returns, KDE is removed.
 
