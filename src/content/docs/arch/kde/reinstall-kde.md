@@ -19,10 +19,12 @@ It includes:
 
 Full install:
 
+```bash
 sudo pacman -S plasma-meta kde-applications
 
 Minimal install:
 
+```bash
 sudo pacman -S plasma-desktop
 
 ---
@@ -31,14 +33,17 @@ sudo pacman -S plasma-desktop
 
 Install SDDM:
 
+```bash
 sudo pacman -S sddm
 
 Enable it:
 
+```bash
 sudo systemctl enable sddm
 
 Start it immediately (optional):
 
+```bash
 sudo systemctl start sddm
 
 ---
@@ -47,6 +52,7 @@ sudo systemctl start sddm
 
 If using NetworkManager:
 
+```bash
 sudo systemctl enable NetworkManager
 sudo systemctl start NetworkManager
 
@@ -56,12 +62,14 @@ sudo systemctl start NetworkManager
 
 PipeWire is standard on modern Arch setups:
 
+```bash
 sudo pacman -S pipewire pipewire-pulse wireplumber
 
 ---
 
 # 🔁 Step 5 — Reboot system
 
+```bash
 reboot
 
 ---

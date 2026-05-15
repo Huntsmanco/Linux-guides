@@ -35,6 +35,7 @@ It does NOT:
 
 Remove the main KDE groups:
 
+```bash
 sudo pacman -Rns plasma-meta kde-applications
 
 ---
@@ -43,11 +44,13 @@ sudo pacman -Rns plasma-meta kde-applications
 
 Search remaining packages:
 
+```bash
 pacman -Qs plasma
 pacman -Qs kde
 
 If anything is still installed, remove it manually:
 
+```bash
 sudo pacman -Rns package-name
 
 ---
@@ -56,15 +59,18 @@ sudo pacman -Rns package-name
 
 Check status:
 
+```bash
 systemctl status sddm
 
 Stop and disable:
 
+```bash
 sudo systemctl disable sddm
 sudo systemctl stop sddm
 
 Remove it:
 
+```bash
 sudo pacman -Rns sddm
 
 ---
@@ -73,6 +79,7 @@ sudo pacman -Rns sddm
 
 This resets KDE settings completely:
 
+```bash
 rm -rf ~/.config/plasma*
 rm -rf ~/.config/kde*
 rm -rf ~/.local/share/plasma*
@@ -82,6 +89,7 @@ rm -rf ~/.cache/*
 
 # 🧽 Step 5 — Remove orphan packages
 
+```bash
 sudo pacman -Rns $(pacman -Qdtq)
 
 ---
@@ -90,6 +98,7 @@ sudo pacman -Rns $(pacman -Qdtq)
 
 Check if Plasma still exists:
 
+```bash
 ls /usr/share/xsessions | grep plasma
 
 If nothing returns, KDE is removed.
