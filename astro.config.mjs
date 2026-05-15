@@ -28,7 +28,7 @@ export default defineConfig({
 				{
 					label: 'Start Here',
 					items: [
-						{ label: 'Home', slug: '/' }
+						{ label: 'Home', link: '/' }
 					],
 				},
 
