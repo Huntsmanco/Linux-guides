@@ -8,7 +8,9 @@ export default defineConfig({
 
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'Linux Guides',
+			description: 'Arch Linux fixes, Hyprland setup notes, and troubleshooting logs',
+
 			social: [
 				{
 					icon: 'github',
@@ -16,16 +18,46 @@ export default defineConfig({
 					href: 'https://github.com/Huntsmanco/Linux-guides'
 				}
 			],
+
+			logo: {
+				src: './src/assets/houston.webp',
+				alt: 'Linux Guides'
+			},
+
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Start Here',
 					items: [
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'Home', slug: '/' }
 					],
 				},
+
 				{
-					label: 'Reference',
-					items: [{ autogenerate: { directory: 'reference' } }],
+					label: 'Arch Linux',
+					items: [
+						{ autogenerate: { directory: 'arch' } }
+					],
+				},
+
+				{
+					label: 'Hyprland / Desktop',
+					items: [
+						{ autogenerate: { directory: 'hyprland' } }
+					],
+				},
+
+				{
+					label: 'Networking',
+					items: [
+						{ autogenerate: { directory: 'networking' } }
+					],
+				},
+
+				{
+					label: 'Troubleshooting',
+					items: [
+						{ autogenerate: { directory: 'troubleshooting' } }
+					],
 				},
 			],
 		}),
